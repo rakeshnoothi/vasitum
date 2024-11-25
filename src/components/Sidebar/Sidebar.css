@@ -1,0 +1,7 @@
+@import url(../../index.css);
+
+@media screen and (orientation: portrait) {
+    .sidebar {
+        display: none;
+    }
+}

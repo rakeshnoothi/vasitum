@@ -1,0 +1,36 @@
+@import url(../../index.css);
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    border-bottom: 1px solid var(--clr-inactive);
+}
+
+.navbar-left-section,
+.navbar-right-section {
+    display: flex;
+    gap: 16px;
+
+    & button {
+        color: var(--clr-inactive);
+    }
+
+    & button:hover {
+        cursor: pointer;
+        color: var(--clr-active);
+    }
+}
+
+.navbar-right-section-image-block {
+    display: flex;
+    align-items: center;
+
+    & div {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: yellow;
+    }
+}
