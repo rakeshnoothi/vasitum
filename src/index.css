@@ -19,8 +19,8 @@
     --clr-signature: #ff5151;
     --clr-inactive: #898989;
     --clr-active: #4b4b4b;
-    --clr-text-primary: black;
-    --clr-text-secondary: white;
+    --clr-primary: black;
+    --clr-secondary: white;
 }
 
 /* Reset CSS properties */

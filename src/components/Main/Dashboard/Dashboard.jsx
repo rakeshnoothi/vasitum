@@ -6,7 +6,6 @@ import DashboardVisualCards from "./DashboardVisualCards";
 const Dashboard = () => {
     return (
         <div className="dashboard">
-            <span className="dashboard-heading">Dashboard</span>
             <div className="dashboard-cards">
                 <DashboardTextCards />
                 <DashboardVisualCards />

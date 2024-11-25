@@ -1,0 +1,14 @@
+@import url(../../index.css);
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+}
+
+.main-heading {
+    font-weight: var(--font-bold);
+    font-size: var(--text-m);
+    padding: 12px;
+}

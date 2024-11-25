@@ -1,5 +1,11 @@
 @import url(../../index.css);
 
+.sidebar {
+    border: 1px solid var(--clr-inactive);
+    padding-block: 40px;
+    padding-inline: 12px;
+}
+
 @media screen and (orientation: portrait) {
     .sidebar {
         display: none;

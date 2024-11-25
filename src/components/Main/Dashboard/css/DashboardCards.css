@@ -2,16 +2,22 @@
 
 .dashboard-cards {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.dashboard-text-cards {
+.dashboard-text-cards,
+.dashboard-visual-cards {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
-.dashboard-text-card {
-    background-color: yellow;
+.dashboard-text-card,
+.dashboard-visual-card {
     padding: 20px;
+    border-radius: 14px;
+    flex-grow: 1;
 
     & div:nth-child(1) {
         font-size: var(--text-s);
@@ -26,5 +32,27 @@
     & div:nth-child(3) {
         font-size: var(--text-xs);
         font-weight: var(--font-normal);
+    }
+}
+
+.dashboard-visual-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid var(--clr-inactive);
+
+    & div:nth-child(3) > div {
+        font-size: var(--text-xs);
+        font-weight: var(--font-normal);
+    }
+}
+
+.image-block {
+    width: 100%;
+}
+
+@media screen and (width >= 654px) {
+    .dashboard-text-cards,
+    .dashboard-visual-cards {
+        flex-direction: row;
     }
 }

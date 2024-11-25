@@ -1,10 +1,5 @@
 @import url(../../../../index.css);
 
-.dashboard-heading {
-    font-weight: var(--font-bold);
-    font-size: var(--text-m);
-}
-
 .dashboard-cards {
     display: flex;
     flex-direction: column;

@@ -1,11 +1,14 @@
 @import url(../../index.css);
 
 .navbar {
+    background-color: var(--clr-secondary);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 17px;
     border-bottom: 1px solid var(--clr-inactive);
+    position: sticky;
+    top: 0;
 }
 
 .navbar-left-section,
