@@ -38,7 +38,7 @@
 .dashboard-visual-card {
     display: flex;
     gap: 20px;
-    border: 1px solid var(--clr-inactive);
+    border: 1px solid var(--clr-inactive-light);
 
     & div:nth-child(3) > div {
         font-size: var(--text-xs);

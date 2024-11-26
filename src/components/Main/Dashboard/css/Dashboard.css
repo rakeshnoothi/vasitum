@@ -1,6 +1,35 @@
 @import url(../../../../index.css);
 
-.dashboard-cards {
+.dashboard {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-wrapper-one {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-wrapper-two {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (width > 767px) {
+    .dashboard-wrapper-two {
+        flex-direction: row;
+    }
+}
+
+@media screen and (width > 1023px) {
+    .dashboard {
+        flex-direction: row;
+    }
+
+    .dashboard-wrapper-two {
+        flex-direction: column;
+    }
 }

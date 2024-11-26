@@ -1,13 +1,73 @@
 @import url(../../index.css);
 
 .sidebar {
-    border: 1px solid var(--clr-inactive);
+    border: 1px solid var(--clr-inactive-light);
     padding-block: 40px;
-    padding-inline: 12px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    background-color: var(--clr-inactive-light);
+    color: var(--clr-inactive-hard);
+    display: none;
 }
 
-@media screen and (orientation: portrait) {
+.aside-button {
+    display: flex;
+    gap: 24px;
+
+    & button:nth-child(1) {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        &:hover {
+            color: var(--clr-signature);
+        }
+    }
+
+    &:hover > * {
+        color: var(--clr-signature);
+    }
+}
+
+.aside-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (width > 767px) {
     .sidebar {
-        display: none;
+        width: max-content;
+        text-wrap: nowrap;
+        display: flex;
+    }
+
+    .aside-button {
+        & div:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media screen and (width > 1023px) {
+    .sidebar {
+        width: 24%;
+        position: sticky;
+    }
+
+    .aside-button {
+        align-self: flex-start;
+        & div:nth-child(2) {
+            display: block;
+            font-size: var(--text-s);
+            color: var(--clr-inactive-hard);
+
+            &:hover {
+                color: var(--clr-signature);
+            }
+        }
     }
 }
