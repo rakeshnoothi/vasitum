@@ -9,7 +9,10 @@
     gap: 36px;
     background-color: var(--clr-inactive-light);
     color: var(--clr-inactive-hard);
-    display: none;
+    /* display: none; */
+    position: absolute;
+    transform: translateX(-1000px);
+    z-index: 1000;
 }
 
 .aside-button {
@@ -35,14 +38,19 @@
     flex-direction: column;
     gap: 36px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
+.cross-icon {
+    display: none;
+}
 @media screen and (width > 767px) {
     .sidebar {
         width: max-content;
         text-wrap: nowrap;
         display: flex;
+        transform: translateX(0);
+        position: static;
     }
 
     .aside-button {
@@ -50,12 +58,15 @@
             display: none;
         }
     }
+
+    .aside-buttons {
+        align-items: center;
+    }
 }
 
 @media screen and (width > 1023px) {
     .sidebar {
         width: 24%;
-        position: sticky;
     }
 
     .aside-button {
@@ -68,6 +79,27 @@
             &:hover {
                 color: var(--clr-signature);
             }
+        }
+    }
+}
+
+/* Util css classes */
+.util-side-bar-open {
+    position: absolute;
+    transform: translateX(0);
+    width: 100%;
+    background-color: white;
+
+    .logo-and-icon-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cross-icon {
+        display: block;
+
+        &:hover {
+            color: var(--clr-signature);
         }
     }
 }

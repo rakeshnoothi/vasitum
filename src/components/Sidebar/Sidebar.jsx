@@ -6,6 +6,8 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import GroupWorkIcon from "@mui/icons-material/GroupWork";
 import HeadsetIcon from "@mui/icons-material/Headset";
 import SettingsIcon from "@mui/icons-material/Settings";
+import useSidebarContext from "../../hooks/useSidebarContext";
+import CloseIcon from "@mui/icons-material/Close";
 
 const asideMainMenuButtons = [
     { name: "Dashboard", button: <DashboardIcon /> },
@@ -30,9 +32,27 @@ const AsideButton = ({ button }) => {
 };
 
 const SideBar = () => {
+    const { shouldSidebarOpen, setShouldSidebarOpen } = useSidebarContext();
+
+    const handleCrossClick = () => {
+        setShouldSidebarOpen(false);
+    };
+
     return (
-        <aside className="sidebar">
-            <div className="logo">VASITUM</div>
+        <aside
+            className={`sidebar ${
+                shouldSidebarOpen ? "util-side-bar-open" : null
+            }`}
+        >
+            <div className="logo-and-icon-wrapper">
+                <div className="logo">VASITUM</div>
+                <button
+                    className="cross-icon"
+                    onClick={() => handleCrossClick()}
+                >
+                    <CloseIcon />
+                </button>
+            </div>
             <div>Main menu</div>
             <div className="aside-buttons aside-main-menu-buttons">
                 {asideMainMenuButtons.map(button => {

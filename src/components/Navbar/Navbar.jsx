@@ -4,12 +4,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import useSidebarContext from "../../hooks/useSidebarContext";
 
 const Navbar = () => {
+    const { setShouldSidebarOpen } = useSidebarContext();
+
+    const handleMenuClick = () => {
+        setShouldSidebarOpen(true);
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-left-section">
-                <button>
+                <button onClick={() => handleMenuClick()}>
                     <MenuIcon />
                 </button>
                 <button>
